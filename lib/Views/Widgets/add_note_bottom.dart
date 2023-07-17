@@ -4,6 +4,6 @@ class AddNote extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(child: Text("Ahmed"),);
   }
 }

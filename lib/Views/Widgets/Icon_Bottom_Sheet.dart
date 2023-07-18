@@ -11,6 +11,6 @@ class IconButtonsheet extends StatelessWidget {
         height: 60,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         onPressed: () {},
-        child: Text("ADD"));
+        child: const Text("ADD",style: TextStyle(fontSize: 20),));
   }
 }

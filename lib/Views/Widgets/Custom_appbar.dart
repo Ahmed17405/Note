@@ -1,41 +1,47 @@
 import 'package:flutter/material.dart';
-class appbarr extends StatelessWidget {
-  const appbarr({Key? key}) : super(key: key);
+
+class AppbarView extends StatelessWidget {
+  const AppbarView({Key? key, required this.title, required this.icon})
+      : super(key: key);
+
+  final String title;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
     return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            "Notes",
-            style: TextStyle(
-              fontSize: 45,
-            ),
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            fontSize: 35,
           ),
-          Searchicon()
-        ],
-      );
+        ),
+        CustomIcon(
+          icon: icon,
+        )
+      ],
+    );
   }
 }
 
-class Searchicon extends StatelessWidget {
-  const Searchicon({Key? key}) : super(key: key);
+class CustomIcon extends StatelessWidget {
+  const CustomIcon({Key? key, required this.icon}) : super(key: key);
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
-    return           Container(
+    return Container(
       decoration: BoxDecoration(
-          color: Colors.white12,
-          borderRadius: BorderRadius.circular(20)),
+          color: Colors.white12, borderRadius: BorderRadius.circular(20)),
       child: IconButton(
         onPressed: () {},
         icon: Icon(
-          Icons.search,
-          size: 35,
+          icon,
+          size: 30,
         ),
       ),
-    )
-    ;
+    );
   }
 }

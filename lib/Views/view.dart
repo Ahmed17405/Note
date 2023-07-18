@@ -8,18 +8,25 @@ class view extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton:FloatingActionButton(
-        onPressed: (){
-          showModalBottomSheet(context: context, builder: (context){
-            return AddNote();
-          });
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showModalBottomSheet(
+            backgroundColor: Colors.black,
+            shape:  RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+            ),
+              context: context,
+              builder: (context) {
+                return AddNote();
+              });
         },
-        child: Icon(Icons.add,size:30 ,),
+        child: Icon(
+          Icons.add,
+          size: 30,
+        ),
       ),
       backgroundColor: Colors.black,
       body: viewbody(),
     );
   }
 }
-
-

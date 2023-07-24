@@ -12,11 +12,11 @@ class AddNote extends StatelessWidget {
       padding: const EdgeInsets.all(40),
       child: Column(
         children: [
-          Custom_Text_Field(lable: 'Title',),
+          CustomTextField(lable: 'Title',),
           SizedBox(height: 35,),
-          Custom_Text_Field(lable: 'Note',maxLines: 7,),
+          CustomTextField(lable: 'Note',maxLines: 7,),
           SizedBox(height: 35,),
-          IconButtonsheet(),
+          IconButtonSheet(),
 
         ],
       ),

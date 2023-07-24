@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'Widgets/add_note_bottom.dart';
 import 'view_body.dart';
 
-class view extends StatelessWidget {
-  const view({Key? key}) : super(key: key);
+class NoteView extends StatelessWidget {
+  const NoteView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,16 +17,16 @@ class view extends StatelessWidget {
             ),
               context: context,
               builder: (context) {
-                return AddNote();
+                return const AddNote();
               });
         },
-        child: Icon(
+        child: const Icon(
           Icons.add,
           size: 30,
         ),
       ),
       backgroundColor: Colors.black,
-      body: viewbody(),
+      body: const ViewBody(),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-class Custom_Text_Field extends StatelessWidget {
-  const Custom_Text_Field({Key? key, required this.lable, this.maxLines = 1,}) : super(key: key);
+class CustomTextField extends StatelessWidget {
+  const CustomTextField({Key? key, required this.lable, this.maxLines = 1,}) : super(key: key);
 
   final String lable;
   final int maxLines ;
@@ -13,7 +13,7 @@ class Custom_Text_Field extends StatelessWidget {
         label: Text(lable),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: Colors.white24
           )
         ),

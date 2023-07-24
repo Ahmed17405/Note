@@ -6,15 +6,15 @@ class EditNoteBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const Padding(
+    return   const Padding(
         padding: EdgeInsets.fromLTRB(22, 60, 22, 0),
       child: Column(
         children: [
           AppbarView(title: 'Edit Note', icon: Icons.edit,),
           SizedBox(height: 20,),
-          Custom_Text_Field(lable: 'Title',),
+          CustomTextField(lable: 'Title',),
           SizedBox(height: 35,),
-          Custom_Text_Field(lable: 'Note',maxLines: 7,),
+          CustomTextField(lable: 'Note',maxLines: 7,),
 
         ],
       ),

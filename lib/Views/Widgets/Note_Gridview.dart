@@ -4,7 +4,7 @@ class NoteGridview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+    return GridView.builder(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 1
     ),
         itemCount: 10,

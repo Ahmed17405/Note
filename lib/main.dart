@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:note_app/Views/view.dart';
+
+import 'Views/view.dart';
 
 void main() async {
   await Hive.initFlutter();
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(brightness: Brightness.dark),
-      home: view(),
+      home: const NoteView(),
     );
   }
 }

@@ -5,8 +5,8 @@ import 'package:note_app/Views/Widgets/Note_listview.dart';
 
 import 'Widgets/Note_Gridview.dart';
 
-class viewbody extends StatelessWidget {
-  const viewbody({Key? key}) : super(key: key);
+class ViewBody extends StatelessWidget {
+  const ViewBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

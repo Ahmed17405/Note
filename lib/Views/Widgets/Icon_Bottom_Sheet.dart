@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class IconButtonSheet extends StatelessWidget {
-  const IconButtonSheet({Key? key}) : super(key: key);
+  const IconButtonSheet({Key? key, this.onPressed}) : super(key: key);
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +11,7 @@ class IconButtonSheet extends StatelessWidget {
         minWidth: double.infinity,
         height: 60,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        onPressed: () {},
+        onPressed: onPressed,
         child: const Text("ADD",style: TextStyle(fontSize: 20),));
   }
 }

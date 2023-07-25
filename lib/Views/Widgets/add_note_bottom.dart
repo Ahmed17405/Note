@@ -31,38 +31,40 @@ class _AddNoteFormState extends State<AddNoteForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-        key: formKey,
-        autovalidateMode: autovalidateMode,
-        child: Column(children: [
-          CustomTextField(
-            onSaved: (value) {
-              title = value;
-            },
-            lable: 'Title',
-          ),
-          const SizedBox(
-            height: 35,
-          ),
-          CustomTextField(
-            onSaved: (value) {
-              subTitle = value;
-            },
-            lable: 'Note',
-            maxLines: 7,
-          ),
-          const SizedBox(
-            height: 35,
-          ),
-          IconButtonSheet(
-            onPressed: () {
-              if (formKey.currentState!.validate()) {
-                formKey.currentState!.save();
-              }else{
-                autovalidateMode = AutovalidateMode.always;
-              }
-            },
-          ),
-        ]));
+    return SingleChildScrollView(
+      child: Form(
+          key: formKey,
+          autovalidateMode: autovalidateMode,
+          child: Column(children: [
+            CustomTextField(
+              onSaved: (value) {
+                title = value;
+              },
+              lable: 'Title',
+            ),
+            const SizedBox(
+              height: 35,
+            ),
+            CustomTextField(
+              onSaved: (value) {
+                subTitle = value;
+              },
+              lable: 'Note',
+              maxLines: 7,
+            ),
+            const SizedBox(
+              height: 35,
+            ),
+            IconButtonSheet(
+              onPressed: () {
+                if (formKey.currentState!.validate()) {
+                  formKey.currentState!.save();
+                } else {
+                  autovalidateMode = AutovalidateMode.always;
+                }
+              },
+            ),
+          ])),
+    );
   }
 }
